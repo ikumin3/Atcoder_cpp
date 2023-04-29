@@ -12,5 +12,5 @@ int main() {
   cin >> s;
 
   cout << (a+b+c) << " " << s << endl;
-  return 0; 
+  return 0;
 }

@@ -1,0 +1,12 @@
+{
+	"id": 39280269,
+	"epoch_second": 1677455711,
+	"problem_id": "math_and_algorithm_a",
+	"contest_id": "math-and-algorithm",
+	"user_id": "ikumin3",
+	"language": "C++ (GCC 9.2.1)",
+	"point": 1000,
+	"length": 131,
+	"result": "AC",
+	"execution_time": 6
+}
