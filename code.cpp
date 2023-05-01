@@ -2,15 +2,15 @@
 using namespace std;
 
 int main() {
-  int a;
-  cin >> a;
+  int A,B,C;
 
-  int b,c;
-  cin >> b >> c;
+  cin >> A >> B >> C;
 
-  string s;
-  cin >> s;
+  if(A > B) swap(A,B);
+  if(C > B) swap(C,B);
 
-  cout << (a+b+c) << " " << s << endl;
+  if(A == 5 && B == 7 && C == 5) cout << "YES";
+  else cout << "NO";
+
   return 0;
 }
