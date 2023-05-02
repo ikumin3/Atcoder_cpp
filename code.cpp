@@ -2,15 +2,22 @@
 using namespace std;
 
 int main() {
-  int A,B,C;
+  int n,l;
+  cin >> n >> l;
 
-  cin >> A >> B >> C;
+  vector<string> s(n);
+  for(int i =0;i<n;i++){
+    cin >>s[i];
+  }
 
-  if(A > B) swap(A,B);
-  if(C > B) swap(C,B);
+  sort(s.begin(),s.end());
 
-  if(A == 5 && B == 7 && C == 5) cout << "YES";
-  else cout << "NO";
+  string min;
+  for(int i=0;i<n;i++){
+    min += s[i];
+  }
+
+  cout << min << endl;
 
   return 0;
 }

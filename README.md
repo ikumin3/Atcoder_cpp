@@ -14,3 +14,9 @@ git push origin main　<br>
 また、コンパイルは下記の通り<br>
 
 g++ code.cpp <br>
+
+
+---
+git add .
+git commit -m "-"
+git push origin main
