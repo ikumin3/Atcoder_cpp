@@ -2,22 +2,24 @@
 using namespace std;
 
 int main() {
-  int n,l;
-  cin >> n >> l;
+  string str;
+  string ans = "";
 
-  vector<string> s(n);
-  for(int i =0;i<n;i++){
-    cin >>s[i];
+  cin >> str;
+  for(int i=0;i<str.length();i++){
+    switch(str[i]){
+      case '0':
+        ans += "0";
+        break;
+      case '1':
+        ans += "1";
+        break;
+      case 'B':
+      ans = ans.substr(0,ans.length() - 1);
+      break;
+    }
   }
 
-  sort(s.begin(),s.end());
+  cout << ans;
 
-  string min;
-  for(int i=0;i<n;i++){
-    min += s[i];
-  }
-
-  cout << min << endl;
-
-  return 0;
 }
