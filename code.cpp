@@ -2,24 +2,23 @@
 using namespace std;
 
 int main() {
-  string str;
-  string ans = "";
+  int N;
+  cin >> N;
 
-  cin >> str;
-  for(int i=0;i<str.length();i++){
-    switch(str[i]){
-      case '0':
-        ans += "0";
-        break;
-      case '1':
-        ans += "1";
-        break;
-      case 'B':
-      ans = ans.substr(0,ans.length() - 1);
-      break;
-    }
+  int A[N];
+  int sum = 0;
+  int ave =0;
+  int ans = 0;
+
+  for(int i = 0;i<N;i++){
+    cin >> A[i];
+    sum += A[i];
+  }
+  ave = round(double(sum) / double(N));
+
+  for(int i=0;i<N;i++){
+    ans += pow((ave - A[i]),2.0);
   }
 
-  cout << ans;
-
+  cout << ans << endl;
 }
