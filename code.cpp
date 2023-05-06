@@ -2,14 +2,14 @@
 using namespace std;
 
 int main() {
-  string w;
-  cin >> w;
+  int a,b,h;
+  int area;
 
-  for (int i = 0; i < w.length(); i++) {
-    if(count(w.begin(), w.end(), w[i]) % 2 != 0){
-      cout << "No" << endl;
-      exit(0);
-    }
-  }
-  cout << "Yes" << endl;
+  cin >> a;
+  cin >> b;
+  cin >> h;
+
+  area = (a + b) * h / 2;
+
+  cout << area << endl;
 }
