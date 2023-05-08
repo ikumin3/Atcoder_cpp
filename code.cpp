@@ -2,14 +2,13 @@
 using namespace std;
 
 int main() {
-  int a,b,h;
-  int area;
+  int N,X,Y;
+  int count = 0;
+  cin >> N >> X >> Y;
 
-  cin >> a;
-  cin >> b;
-  cin >> h;
+  for(int i =1; i<=N;i++){
+    if(i%X==0 || i%Y==0) count++;
+  }
 
-  area = (a + b) * h / 2;
-
-  cout << area << endl;
+  cout << count << endl;
 }
