@@ -2,13 +2,27 @@
 using namespace std;
 
 int main() {
-  int N,X,Y;
-  int count = 0;
-  cin >> N >> X >> Y;
+  int N;
+  cin >> N;
 
-  for(int i =1; i<=N;i++){
-    if(i%X==0 || i%Y==0) count++;
+  vector<int> A(N);
+  bool end = true;
+
+  for(auto& a : A){
+    cin >> a;
   }
 
-  cout << count << endl;
+  for(int i=0;i<N;i++){
+    if(abs(A[i] - A[i+1]) != 1){
+      end = false;
+    }
+
+    if(!end){
+      for(int j = 0;j<N;i++){
+        if(A[i] < A[i+1]){
+          A.insert(i+1,A[i]);
+        }
+      }
+    }
+  }
 }
