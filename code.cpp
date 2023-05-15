@@ -2,27 +2,17 @@
 using namespace std;
 
 int main() {
-  int N;
-  cin >> N;
+  int N,S;
+  int result = 0;
+  cin >> N >> S;
 
-  vector<int> A(N);
-  bool end = true;
-
-  for(auto& a : A){
-    cin >> a;
-  }
-
-  for(int i=0;i<N;i++){
-    if(abs(A[i] - A[i+1]) != 1){
-      end = false;
-    }
-
-    if(!end){
-      for(int j = 0;j<N;i++){
-        if(A[i] < A[i+1]){
-          A.insert(i+1,A[i]);
-        }
-      }
+  for(int i=1;i<=N;i++){
+    for(int j=1;j<=N;j++){
+      if(i+j <= S) result++;
     }
   }
+
+  cout << result << endl;
+
+  return 0;
 }
