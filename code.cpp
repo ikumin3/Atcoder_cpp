@@ -3,16 +3,27 @@ using namespace std;
 
 int main() {
   int N,S;
-  int result = 0;
   cin >> N >> S;
 
-  for(int i=1;i<=N;i++){
-    for(int j=1;j<=N;j++){
-      if(i+j <= S) result++;
+  vector<int> A(N);
+  for(int i=0;i<N;i++) cin >> A.at(i);
+
+  // 選ぶ/選ばないbit全探索
+  for(int bit = 0;bit<(1<<N);++bit){
+    int sum = 0;
+    
+    for(int i = 0;i<N;i++){
+      if(bit&(1<<i)){
+        sum+=A[i];
+        if(sum > S) break;
+      }
+      if(sum == S){
+        cout << "Yes" << endl;
+        return 0;
+      }
     }
   }
 
-  cout << result << endl;
-
+  cout << "No" << endl;
   return 0;
 }
